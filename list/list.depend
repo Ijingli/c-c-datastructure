@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1436282932 source:d:\code\c-c-datastructure\list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list.h"
+
+1436278971 d:\code\c-c-datastructure\list\include\list.h
+	<stdlib.h>
+
+1436283325 source:d:\code\c-c-datastructure\list\src\list.c
+	"list.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
