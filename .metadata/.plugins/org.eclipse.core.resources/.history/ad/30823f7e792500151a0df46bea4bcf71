@@ -1,0 +1,38 @@
+/*
+ * dlist.c
+ *
+ *  Created on: 2015年7月8日
+ *      Author: Administrator
+ */
+
+#include "dlist.h"
+#include <stdlib.h>
+#include <string.h>
+
+//初始化函数
+void dlist_init(DList *list,void (*destroy) (void *data))
+{
+	list->size = 0;
+	list->head = NULL;
+	list->tail = NULL;
+	list->destroy = destroy;
+}
+//删除所有节点，利用init函数的destroy函数来清理内存
+void dlist_destroy(DList* list)
+{
+
+}
+//成功返回1  失败返回-1
+int  dlist_ins_next(DList *list,DListElmt *element,const void *data)
+{
+
+}
+int  dlist_ins_prev(DList *list,DListElmt *element,const void *data)
+{
+
+}
+//删除element所指定的节点，该节点的数据域存放到data中
+int  dlist_remove(DList *list,DListElmt *element,void **data)
+{
+
+}
