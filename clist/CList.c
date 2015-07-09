@@ -1,0 +1,58 @@
+/*
+ * CList.c
+ *
+ *  Created on: 2015Äê7ÔÂ9ÈÕ
+ *      Author: Administrator
+ */
+#include "CList.h"
+#include <string.h>
+void clist_init(CList *list,void (*destroy)(void *data)){
+	list->size = 0;
+	list->head = NULL;
+	list->destroy = destroy;
+}
+void clist_destroy(CList *list){
+	void *data;
+	while(clist_size(list)>0){
+		if(clist_rem_next(list,list->head,(void **)&data)==0&&
+				list->destroy!=NULL){
+			list->destroy(data);
+		}
+	}
+	memset(list,0,sizeof(CList));
+	return;
+}
+int  clist_ins_next(CList *list,CListElmt *element,void *data){
+	CListElmt *newElement;
+	if((newElement = (CListElmt*)malloc(sizeof(CListElmt)))== NULL)
+		return -1;
+	newElement->data = data;
+	if(element==NULL){
+		list->head = newElement;
+		list->head->next = newElement;
+	}else{
+		newElement->next = element->next;
+		element->next = newElement;
+	}
+	list->size++;
+	return 0;
+}
+int  clist_rem_next(CList *list,CListElmt *element,void **data){
+	if(element == NULL || clist_size(list)==0)
+		return -1;
+    CListElmt *oldElement;
+    *data = element->next->data;
+    if(element->next == element){
+    	oldElement = element->next;
+    	list->head = NULL;
+    }else{
+    	oldElement = element->next;
+    	element->next = element->next->next;
+    	if(oldElement == clist_head(list))
+    		list->head = oldElement->next;
+    }
+    free(oldElement);
+	list->size--;
+	return 0;
+}
+

@@ -1,0 +1,22 @@
+/*
+ * main.c
+ *
+ *  Created on: 2015Äê7ÔÂ9ÈÕ
+ *      Author: Administrator
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "clist.h"
+void destroy(void *data){
+	free(data);
+}
+
+int main()
+{
+    CList *list = (CList*)malloc(sizeof(CList));
+	clist_init(list,destroy);
+	printf("hello world\n");
+	return 0;
+}
+

@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: 2015Äê7ÔÂ9ÈÕ
+ *      Author: Administrator
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "clist.h"
+
+int main()
+{
+
+
+	printf("hello world\n");
+	return 0;
+}
+

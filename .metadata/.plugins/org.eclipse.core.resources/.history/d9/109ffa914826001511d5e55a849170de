@@ -1,0 +1,35 @@
+/*
+ * main.c
+ *
+ *  Created on: 2015Äê7ÔÂ9ÈÕ
+ *      Author: Administrator
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "clist.h"
+void destroy(void *data){
+	free(data);
+}
+
+typedef struct Stu_
+{
+	int age;
+	char *name;
+}Stu;
+
+int main()
+{
+    CList *list = (CList*)malloc(sizeof(CList));
+	clist_init(list,destroy);
+	Stu *stu = (Stu*)malloc(sizeof(Stu));
+	clist_ins_next(list,NULL,(void *)stu);
+    clist_ins_next(list,NULL,(void *)stu);
+
+    printf("clist_size()= %d\n",clist_size(list));
+    Stu *result = (Stu*)(clist_head(list)->data);
+    printf("%d,%s\n",result->age,result->name);
+	printf("hello world\n");
+	return 0;
+}
+
