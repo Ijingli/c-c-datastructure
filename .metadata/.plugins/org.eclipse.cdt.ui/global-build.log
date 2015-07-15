@@ -1,39 +1,43 @@
-23:14:22 **** Incremental Build of configuration Debug for project clist ****
+19:52:22 **** Rebuild of configuration Debug for project set ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o set.o "..\\set.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o list.o "..\\list.c" 
+..\list.c: In function 'list_ins_next':
+..\list.c:38:21: warning: assignment discards 'const' qualifier from pointer target type [enabled by default]
+    newElement->data = data;
+                     ^
+..\list.c: In function 'list_rem_next':
+..\list.c:60:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("list_size = %d,Error\n",list_size(list));
+   ^
+..\list.c:60:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+..\list.c:64:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]
+   printf("Err element == list->tail,can not remove next\n");
+   ^
+gcc -o set.exe list.o main.o set.o 
+Info: Nothing to build for set
+20:02:39 **** Incremental Build of configuration Debug for project set ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'destroy':
-..\main.c:20:21: error: expected ')' before 'stu'
-  printf("11 %d,%s\n"stu->age,stu->name);
-                     ^
-..\main.c:20:21: warning: format '%d' expects a matching 'int' argument [-Wformat=]
-..\main.c:20:21: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-..\main.c:22:21: error: expected ')' before 'stu'
-  printf("22 %d,%s\n"stu->age,stu->name);
-                     ^
-..\main.c:22:21: warning: format '%d' expects a matching 'int' argument [-Wformat=]
-..\main.c:22:21: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-..\main.c:24:21: error: expected ')' before 'stu'
-  printf("33 %d,%s\n"stu->age,stu->name);
-                     ^
-..\main.c:24:21: warning: format '%d' expects a matching 'int' argument [-Wformat=]
-..\main.c:24:21: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
-..\main.c: In function 'main':
-..\main.c:55:10: warning: unused variable 'result' [-Wunused-variable]
-     Stu *result = (Stu*)(clist_head(list)->data);
-          ^
-23:14:55 **** Incremental Build of configuration Debug for project clist ****
+gcc -o set.exe list.o main.o set.o 
+20:03:59 **** Incremental Build of configuration Debug for project set ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:55:10: warning: unused variable 'result' [-Wunused-variable]
-     Stu *result = (Stu*)(clist_head(list)->data);
-          ^
-gcc -o clist.exe CList.o main.o 
-23:17:31 **** Incremental Build of configuration Debug for project clist ****
+gcc -o set.exe list.o main.o set.o 
+20:05:40 **** Incremental Build of configuration Debug for project set ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
 ..\main.c: In function 'main':
-..\main.c:52:10: warning: unused variable 'result' [-Wunused-variable]
-     Stu *result = (Stu*)(clist_head(list)->data);
-          ^
-gcc -o clist.exe CList.o main.o 
+..\main.c:52:9: warning: unused variable 's' [-Wunused-variable]
+    Stu *s = (Stu*)(head->data);
+         ^
+gcc -o set.exe list.o main.o set.o 
+20:07:49 **** Incremental Build of configuration Debug for project set ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:53:9: warning: unused variable 's' [-Wunused-variable]
+    Stu *s = (Stu*)(head->data);
+         ^
+gcc -o set.exe list.o main.o set.o 

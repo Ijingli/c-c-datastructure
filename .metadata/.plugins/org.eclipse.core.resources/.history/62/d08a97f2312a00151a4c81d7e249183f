@@ -1,0 +1,19 @@
+/*
+ * set.h
+ *
+ *  Created on: 2015年7月14日
+ *      Author: Administrator
+ */
+
+#ifndef SET_H_
+#define SET_H_
+#include <stdlib.h>
+#include "list.h"
+typedef List Set;//将List重命名为Set
+
+void set_init(Set *set,int (*match)(const void *key1,const void *key2),
+		void (*destroy)(void *data));
+#define set_destroy list_destroy
+
+
+#endif /* SET_H_ */

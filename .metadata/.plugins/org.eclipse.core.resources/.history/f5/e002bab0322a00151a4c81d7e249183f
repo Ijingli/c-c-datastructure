@@ -1,0 +1,59 @@
+/*
+ * set.c
+ *
+ *  Created on: 2015年7月14日
+ *      Author: Administrator
+ */
+#include<stdlib.h>
+#include<string.h>
+#include "list.h"
+#include "set.h"
+
+void set_init(Set *set,int (*match)(const void *key1,const void *key2),
+		void (*destroy)(void *data)){
+
+}
+
+//首先调用set_is_member来确定是不是已经包含data，如果是返回1，如果不是调用list_ins_next
+//插入返回0，已经存在返回1，失败返回-1
+int set_insert(Set *set,const void *data){
+
+}
+//通过list_next遍历，根据match函数所指定的函数确定要移除的成员
+//成功返回0，否则返回-1
+int set_remove(Set *set,void **data){
+
+	set->size--;
+	return 0;
+}
+//先set_init初始化setu，然后遍历set1，对set2判断set_is_member，逐个添加
+//成功计算并集返回0，否则返回-1
+int set_union(Set *setu,const Set *set1,const Set *set2){
+	return 0;
+}
+//先调用set_init初始化seti，遍历set1，对set进行set_is_member，是的逐个添加
+//成功计算交集返回0，否则返回-1
+int set_intersection(Set *seti,const Set *set1,const Set *set2){
+	return 0;
+}
+//县调用set_init初始化setd，针对set1的每个成员调用set_is_member确定成员是否在set2出现过，没出现过的加入setd
+//成功计算差值返回0，否则返回-1
+int set_difference(Set *setd,const Set *set1,const Set *set2){
+	return 0;
+}
+//通过list_next遍历集合成员直到找到与data吻合的数据
+//找到成员返回1，否则返回-1
+int set_is_member(Set *set,const void *data){
+	return 0;
+}
+//遍历set1，是不是set_is_member set2
+//set1是set2的子集返回1，否则返回-1
+int set_is_subset(const Set *set1,const Set *set2){
+	return 0;
+}
+//先判断size一样，然后再调用set_is_subset
+//相等返回1，否则返回-1
+int set_is_equal(const Set *set1,const Set *set2){
+	return 0;
+}
+

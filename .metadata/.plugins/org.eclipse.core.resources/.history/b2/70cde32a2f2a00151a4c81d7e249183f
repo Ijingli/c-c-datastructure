@@ -1,0 +1,15 @@
+/*
+ * set.h
+ *
+ *  Created on: 2015年7月14日
+ *      Author: Administrator
+ */
+
+#ifndef SET_H_
+#define SET_H_
+#include <stdlib.h>
+#include "list.h"
+typedef List Set;//将List重命名为Set
+
+
+#endif /* SET_H_ */
