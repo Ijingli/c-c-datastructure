@@ -1,0 +1,51 @@
+/*
+ * chtbl.c
+ *
+ *  Created on: 2015Äê7ÔÂ21ÈÕ
+ *      Author: Administrator
+ */
+#include "chtbl.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+
+
+/*
+typedef struct CHTBL_
+{
+	int buckets;
+	int (*h)(void *data);
+	int (*match)(const void *key1,const void *key2);
+	void (*destroy) (void *data);
+	int size;
+	List *table
+}CHTBL;
+#define chtbl_size(htbl)  ((htbl)->size)
+*/
+
+int chtbl_init(CHTBL *htbl,int buckets, int (*h)(void *data),
+		int (*match)(const void *key1,const void *key2),void (*destroy)(void *data)){
+
+}
+
+void chtbl_destroy(CHTBL *htbl){
+
+}
+
+int chtbl_insert(CHTBL *htbl,void *data){
+
+}
+
+int chtbl_remove(CHTBL *htbl,void **data){
+
+}
+
+int chtbl_lookup(const CHTBL *htbl,void **data){
+
+}
+
+
+
+
+
